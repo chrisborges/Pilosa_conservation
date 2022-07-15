@@ -4,7 +4,7 @@ library(raster)
 library(rgdal)
 library(rgeos)
 
-main_dir=("/Users/christiellyborges/Library/Mobile Documents/com~apple~CloudDocs/Research/Pilosa/Data/")
+main_dir=("/Pilosa/Data/")
 
 #lendo os arquivos raster salvos a partir do hd
 bio10 <- raster(paste0(main_dir,"Environmental/","bio10_AS_0k.grd"))
@@ -91,13 +91,6 @@ for(i in 1:length(files)){
   plot(sp_shp,add=T,col="red") # add the occurrence data to the plotted raster
   
   #
-  #AS <- extract(clima.AS, 1:ncell(clima.AS))
-  #AS.coords <- xyFromCell(clima.AS, 1:ncell(clima.AS)) 
-  #AS <- cbind(AS.coords, cells= 1:ncell(clima.AS), AS)
-  #AS <- na.omit(AS)
-  #sp.back.id <- sample(1:nrow(AS), nrow(sp.var))  # mantendo prevalencia 0.5
-  #sp.back <- AS[sp.back.id,]
-  #points(sp.back[,"x"], sp.back[,"y"], pch=20, col='black')
   sp.bg = as.data.frame(bg)
   head(sp.bg)
   names(sp.bg)[names(sp.bg) == "x"] = "longitude"
