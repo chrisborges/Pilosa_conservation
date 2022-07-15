@@ -2,7 +2,7 @@
 library(dplyr)
 library(plyr)
 
-setwd("/Users/christiellyborges/Library/Mobile Documents/com~apple~CloudDocs/Research/Pilosa/Data/Raw-occurrence")
+setwd("/Pilosa/Data/Raw-occurrence")
 
 data=read.csv("NeoXen-Pilosa.csv", h=T)
 head(data)
@@ -76,16 +76,5 @@ tam_tet = rbind.fill(tam_tet_df, tam_tet_neo)
 tam_tet_clean = tam_tet %>% distinct(longitude, latitude, .keep_all= TRUE)
 
 ## save new raw occurrences
-drive="/Users/christiellyborges/Library/Mobile Documents/com~apple~CloudDocs/Research/Pilosa/Data/SP-occur-2021/"
+drive="/Pilosa/Data/SP-occur-2021/"
 write.csv(bra_tor_clean, paste0(drive,"Bradypus_torquatus.csv"), row.names=F)
-
-
-# usar apenas o banco de dados NeoXen
-write.csv(bra_tor_neo, paste0(drive,"Bradypus_torquatus.csv"), row.names=F)
-write.csv(bra_var_clean,  paste0(drive,"Bradypus_variegatus.csv"), row.names=F)
-write.csv(bra_tri_neo,  paste0(drive,"Bradypus_tridactylus.csv"), row.names=F)
-write.csv(myr_tri_neo,  paste0(drive,"Myrmecophaga_tridactyla.csv"), row.names=F)
-write.csv(tam_mex_clean,  paste0(drive,"Tamandua_mexicana.csv"), row.names=F)
-write.csv(tam_tet_neo,  paste0(drive,"Tamandua_tetradactyla.csv"), row.names=F)
-write.csv(cho_did_clean,  paste0(drive,"Choloepus_didactylus.csv"), row.names=F)
-write.csv(cho_hof_clean,  paste0(drive,"Choloepus_hoffmanni.csv"), row.names=F)
