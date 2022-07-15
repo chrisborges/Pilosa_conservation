@@ -551,7 +551,7 @@ ENM_func = function(sp_back, sp_ocor, cross_validation){
 
 
 # run ENM
-main_dir="/Users/christiellyborges/Library/Mobile Documents/com~apple~CloudDocs/Research/Pilosa/Data/"
+main_dir="/Pilosa/Data/"
 files_back = list.files(paste0(main_dir, "SP-occur-env"), pattern="Background_random", full.names=T)
 files_ocor = list.files(paste0(main_dir, "SP-occur-env"), pattern="*_var.csv", full.names=T)
 
