@@ -48,7 +48,7 @@ enm_threshold = function(files_suit, files_obs, type="mtp", dir){
 }
 
 
-maps_dir=("/Users/christiellyborges/Library/Mobile Documents/com~apple~CloudDocs/Research/Pilosa/Data/")
+maps_dir=("/Pilosa/Data/")
 # read all suitability files
 files_suit = list.files(paste0(maps_dir, "ENM"), pattern="*Suitability.csv", full.names=T)
 # read all occurrence files
